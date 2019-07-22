@@ -1,0 +1,123 @@
+
+body{
+
+font-family: verdana,sans-serif;
+
+margin: 0;
+
+}
+
+.slideshow-container{
+
+width: 800px;
+
+position: relative;
+
+margin: auto;
+
+margin-top: 4vh;
+
+
+}
+
+.myslides{
+
+display: none;
+
+}
+
+.back , .next{
+
+position: absolute;
+
+top: 50%;
+
+font-size: 18px;
+
+font-weight: bold;
+
+padding: 16px;
+
+margin-top: -22px;
+
+border-radius: 0 3px 3px 0;
+
+color: #fff;
+
+cursor: pointer;
+
+}
+
+.next{
+
+right: 0;
+
+border-radius: 3px 0 0 3px;
+
+}
+
+.back:hover,.next:hover{
+
+background-color: orange;
+
+}
+
+.caption{
+
+text-align: center;
+
+position: absolute;
+
+bottom: 8px;
+
+width: 100%;
+
+color: orange;
+
+font-size: 20px;
+
+font-weight: bold;
+
+padding: 8px 22px;
+
+}
+
+.dots{
+
+width: 13px;
+
+height: 13px;
+
+background: gray;
+
+display: inline-block;
+
+border-radius: 50%;
+
+cursor: pointer;
+
+}
+
+.fade{
+
+animation-name:fade;
+
+animation-duration:1.5s;
+
+}
+
+@keyframes fade{
+
+from {opacity: 0.4;}
+
+to {opacity: 1;}
+
+}
+
+.active, .dot:hover {
+
+background-color: orange;
+
+}
+
+</style>

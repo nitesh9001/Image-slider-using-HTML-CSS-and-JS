@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>image_slider_with_dots</title>
+
+</head>
+
+<link rel="stylesheet" type="text/css" href="slider.css">
+
+<body>
+
+
+<div class="slideshow-container">
+
+<div class="myslides">
+
+<div class="fade">	
+
+<div><img src="1.jpg"></div>
+
+<div class="caption">Caption 1</div>
+
+</div>
+
+</div>
+
+
+<div class="myslides">
+
+<div class="fade">
+
+<div><img src="2.jpg"></div>
+
+<div class="caption">Caption 2</div>
+
+</div>
+
+</div>
+
+
+<div class="myslides">
+
+<div class="fade">
+
+<div><img src="3.jpg"></div>
+
+<div class="caption">Caption 3</div>
+
+</div>
+
+</div>
+
+<div class="myslides">
+
+<div class="fade">
+
+<div><img src="4.jpg"></div>
+
+<div class="caption">Caption 4</div>
+
+</div>
+
+</div>
+
+
+<a class="back" onclick="plusSlides(-1)">&#10094;</a>
+
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+</div>
+
+<br>
+
+
+<div style="text-align:center">
+
+<span class="dots" onclick="currentSlide(1)"></span> 
+
+<span class="dots" onclick="currentSlide(2)"></span> 
+
+<span class="dots" onclick="currentSlide(3)"></span> 
+
+<span class="dots" onclick="currentSlide(4)"></span> 
+
+</div>
+
+
+<script type="text/javascript">
+
+var slide_Index = 1;
+
+showSlide(slide_Index);
+
+
+function plusSlides(n){
+
+showSlide(slide_Index += n);
+
+}
+
+
+function currentSlide(n) {
+
+showSlide(slide_Index = n);
+
+}
+
+
+function showSlide(n){
+
+var i;
+
+var slides = document.getElementsByClassName("myslides");
+
+var dots = document.getElementsByClassName("dots");
+
+if (n > slides.length) { slide_Index = 1};
+
+if (n < 1) { slide_Index = slides.length};
+
+for (i=0;i<slides.length;i++) {
+
+slides[i].style.display = "none";
+
+};
+
+for (i=0;i<dots.length;i++) {
+
+dots[i].className = dots[i].className.replace(" active","");
+
+};
+
+slides[slide_Index-1].style.display = "block";
+
+dots[slide_Index-1].className += " active";
+
+}
+
+
+
+</script>
+
+</body>
+</html>
